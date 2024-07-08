@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:animateLayoutChanges="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="30dp"
+                android:background="#213685">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Головне меню"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-medium"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="35dp"
+                android:layout_marginTop="100dp"
+                android:animateLayoutChanges="true">
+                <!-- Кнопка "Маршрути" -->
+                <Button
+                    android:id="@+id/btnRoutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Маршрути"
+                    android:textSize="18sp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Вложенные кнопки для "Маршрути" -->
+                <LinearLayout
+                    android:id="@+id/routeSubMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:gravity="left"
+                    android:paddingHorizontal="20dp"
+                    android:paddingLeft="16dp">
+
+                    <Button
+                        android:id="@+id/btnRoutesBus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Автобуси"
+                        android:layout_marginBottom="4dp" />
+
+                    <Button
+                        android:id="@+id/btnRoutesTrain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Потяги"
+                        android:layout_marginBottom="4dp" />
+
+                    <Button
+                        android:id="@+id/btnRoutesAirplane"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Літаки"
+                        android:layout_marginBottom="8dp" />
+                </LinearLayout>
+
+                <!-- Кнопка "Розклад" -->
+                <Button
+                    android:id="@+id/btnSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Розклад"
+                    android:textSize="18sp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Вложенные кнопки для "Розклад" -->
+                <LinearLayout
+                    android:id="@+id/scheduleSubMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:gravity="left"
+                    android:paddingLeft="16dp">
+
+                    <Button
+                        android:id="@+id/btnScheduleBus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Автобусы"
+                        android:layout_marginBottom="4dp" />
+
+                    <Button
+                        android:id="@+id/btnScheduleTrain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Поезда"
+                        android:layout_marginBottom="4dp" />
+
+                    <Button
+                        android:id="@+id/btnScheduleAirplane"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Самолеты"
+                        android:layout_marginBottom="8dp" />
+                </LinearLayout>
+
+                <!-- Кнопка "Користувачі" -->
+                <Button
+                    android:id="@+id/btnUsers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Користувачі"
+                    android:textSize="18sp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="8dp" />
+                <Button
+                    android:id="@+id/btnTickets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Квитки"
+                    android:textSize="18sp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:background="#DCDCDC"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:id="@+id/open_SearchTicket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/magnifying_glass" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пошук Квитків"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/open_MyTickets"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="openMyTickets"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ticket" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Мої квитки"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/userp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Профіль"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/logout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/logout" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вийти"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

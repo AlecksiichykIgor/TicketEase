@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAuthorization">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:layout_editor_absoluteX="-52dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <TextView
+            android:id="@+id/admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutButtons"
+            android:fontFamily="sans-serif-medium"
+            android:text="Увійти адмінстратором"
+            android:layout_centerHorizontal="true"
+            android:onClick="openAdminAuthorization"
+            android:textColor="@color/tint_color" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-condensed"
+            android:shadowColor="#808080"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:text="TicketEasy"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/auth_fon"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fon" />
+
+        <RelativeLayout
+            android:id="@+id/box_input_login_password"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="80dp">
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#213685"
+                android:hint="Введіть логін"
+                android:textColor="#0000FF"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextPhone"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#0000FF"
+                android:hint="Введіть пароль"
+                android:inputType="textPassword"
+                android:textColor="#213685"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/box_input_login_password"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#213685"
+                android:text="Увійти"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/registrationButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:layout_toEndOf="@+id/loginButton"
+                android:backgroundTint="#213685"
+                android:text="Зареєструватися"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

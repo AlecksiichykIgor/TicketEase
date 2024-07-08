@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Задний TextView -->
+    <TextView
+        android:id="@+id/backTextView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/fon"
+        android:padding="8dp"/>
+
+    <!-- Передний TextView -->
+    <LinearLayout
+        android:id="@+id/frontTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="40dp"
+        android:background="@drawable/rounded_container_train_seats"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_container">
+            <EditText
+                android:id="@+id/adminPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="6dp"
+                android:paddingStart="10dp"
+                android:hint="Номер телефону"
+                android:background="@null"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_container">
+            <EditText
+                android:id="@+id/adminPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="6dp"
+                android:paddingStart="10dp"
+                android:inputType="textPassword"
+                android:hint="Пароль адміністратору"
+                android:background="@null"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#213685"
+                android:text="Увійти"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:layout_toEndOf="@+id/loginButton"
+                android:backgroundTint="#213685"
+                android:text="Повернутись"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

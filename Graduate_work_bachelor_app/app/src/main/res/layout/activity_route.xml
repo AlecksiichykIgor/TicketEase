@@ -1,0 +1,56 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityRoute">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="#213685">
+
+            <TextView
+                android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_left_white" />
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:text="Список маршрутів Автобусів"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/busRouteList"
+            android:paddingHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/addButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

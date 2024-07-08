@@ -1,0 +1,16 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние, когда TextView нажат -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp" /> <!-- Скругленные углы -->
+            <solid android:color="#FF4081" /> <!-- Новый цвет фона -->
+        </shape>
+    </item>
+    <!-- Состояние по умолчанию -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="0dp" /> <!-- Установите радиус в 0, если не нужно скругление -->
+            <solid android:color="#2196F3" /> <!-- Оригинальный цвет фона -->
+        </shape>
+    </item>
+</selector>

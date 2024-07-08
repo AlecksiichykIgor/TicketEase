@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityBuyTickets"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#213685"
+            android:paddingVertical="20dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_left_white"/>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/header_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="28sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/white"
+                    android:text="Квиток 1/1"/>
+                <TextView
+                    android:id="@+id/header_title_Seats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#DCDCDC"
+                    android:text="7 місце"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/rounded_container">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Ім'я"/>
+                <EditText
+                    android:id="@+id/firstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="8dp"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/rounded_container"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="18dp"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Прізвище"/>
+                <EditText
+                    android:id="@+id/lastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/rounded_container"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottomMenuTicket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@drawable/top_border"
+        android:paddingVertical="20dp"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:background="@null"
+                android:text="600 грн"
+                android:textSize="26sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/buttonConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Підтвердити"
+                android:textSize="22sp"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#213685"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:paddingHorizontal="30dp"-->
+<!--android:orientation="vertical">-->
+<!--<TextView-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="Додатково"-->
+<!--    android:fontFamily="sans-serif-medium"-->
+<!--    android:textSize="20sp"/>-->
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@drawable/rounded_container"-->
+<!--    android:orientation="horizontal">-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Вода негазована"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Вода негазована"/>-->
+<!--    </LinearLayout>-->
+<!--    <Switch-->
+<!--        android:id="@+id/switchWater"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="18sp"-->
+<!--        android:padding="8dp"-->
+<!--        android:checked="false"-->
+<!--        android:textColor="@color/black"/>-->
+<!--</LinearLayout>-->
+<!--</LinearLayout>-->

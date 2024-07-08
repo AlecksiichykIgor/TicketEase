@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityTransportSchedules">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#213685"
+            android:paddingVertical="20dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_left_white"/>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/header_title_Cities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="28sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/white"
+                    android:text="Київ - Харків"/>
+                <TextView
+                    android:id="@+id/header_title_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#DCDCDC"
+                    android:text="6 Червня, Чт"/>
+            </LinearLayout>
+        </LinearLayout>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:paddingVertical="10dp">
+            <LinearLayout
+                android:id="@+id/dateContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </HorizontalScrollView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D3D3D3" />
+        <ListView
+            android:id="@+id/list_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:paddingHorizontal="10dp"
+            android:dividerHeight="10dp">
+
+        </ListView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

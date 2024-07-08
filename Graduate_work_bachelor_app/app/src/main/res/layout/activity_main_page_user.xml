@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityMainPageUser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#213685"
+            android:paddingVertical="30dp"
+            android:paddingLeft="40dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:text="Пошук квитків"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/rounded_container"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!-- Пустой кружок -->
+                    <TextView
+                        android:id="@+id/empty_circle"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/empty_circle"
+                        android:textColor="@color/black" />
+                    <!-- Стрелка -->
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/down_arrow"
+                        android:textColor="@color/black"
+                        />
+                    <!-- Заполненный кружок -->
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_toEndOf="@id/empty_circle"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/filled_circle"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="vertical"
+                    >
+                    <EditText
+                        android:id="@+id/departure_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingVertical="5dp"
+                        android:background="@null"
+                        android:hint="Звідки"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D3D3D3" />
+                    <EditText
+                        android:id="@+id/arrival_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingVertical="5dp"
+                        android:background="@null"
+                        android:hint="Куди"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingVertical="20dp"
+                    android:paddingHorizontal="7dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/swap_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/swap"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/rounded_container"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/date_picker_actions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/calendar"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/date_picker_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif"
+                        android:paddingVertical="5dp"
+                        android:layout_weight="2.5"
+                        android:background="@null"
+                        android:hint="Дата"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:background="#D3D3D3" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center"
+                    android:paddingLeft="20dp"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/plus"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:layout_weight="8"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif"
+                        android:paddingVertical="5dp"
+                        android:text="Зворотній квиток"
+                        android:background="@null"
+                        android:hint="Дата"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/plane_Layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="150dp"
+                                android:background="@drawable/icon_plane"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/bus_Layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="150dp"
+                                android:background="@drawable/icon_bus"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/train_Layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="150dp"
+                                android:background="@drawable/icon_train"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/plane_Radio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="50dp"
+                            android:button="@drawable/custom_radio_button"
+                            style="@style/CustomRadioButtonStyle" />
+                        <RadioButton
+                            android:id="@+id/bus_Radio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="50dp"
+                            android:button="@drawable/custom_radio_button"
+                            style="@style/CustomRadioButtonStyle" />
+                        <RadioButton
+                            android:id="@+id/train_Radio"
+                            android:layout_marginHorizontal="50dp"
+                            style="@style/CustomRadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/custom_radio_button"
+                            android:gravity="center" />
+                    </RadioGroup>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingHorizontal="40dp"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/button_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:backgroundTint="#213685"
+                    android:text="Знайти"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:background="#DCDCDC"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:id="@+id/open_SearchTicket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/magnifying_glass" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пошук Квитків"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/open_MyTickets"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="openMyTickets"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ticket" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Мої квитки"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/userp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Профіль"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/logout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/logout" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вийти"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

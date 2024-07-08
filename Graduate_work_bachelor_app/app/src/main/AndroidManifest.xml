@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Graduate_work_bachelor_app"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".TicketsAdminList"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAdminAuthorization"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAuthorization"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityBusSeats"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityBuyTickets"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityMainPageAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityMainPageUser"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityMyTickets"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityPlaneSeats"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityRoute"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityRouteInfo"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityTrainSeats"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityTransportSchedules"
+            android:exported="false" />
+    </application>
+
+</manifest>

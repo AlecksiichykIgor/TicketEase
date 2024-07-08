@@ -1,0 +1,8 @@
+<!-- res/drawable/top_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" /> <!-- Прозрачный фон -->
+    <size android:height="1dp"/> <!-- Размер объекта, определяющий минимальную высоту -->
+    <stroke
+        android:width="2dp"
+    android:color="@android:color/darker_gray" />
+</shape>
